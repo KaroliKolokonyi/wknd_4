@@ -3,8 +3,18 @@
 # bonus: returns a string of all missing letters as a string. ex: find_missing_letter("ace") would return "bd", write your own test.
 
 def find_missing_letter(range)
-
+ letter =range.split(" ")
+  
+ letters = (letter[0]..letter[-1]).to_a
+ 
+  if letters != letter
+    
+    range = (letters - letter.join(''))
+  else
+    range = nil
+  end
 end
+
 
 # Driver code - don't touch anything below this line.
 puts "TESTING find_missing_letter..."

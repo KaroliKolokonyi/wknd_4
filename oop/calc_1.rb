@@ -32,23 +32,7 @@ class SimpleCalculator
 
 end
 
-class FancyCalculator
-
-  def add(first_number, second_number)
-    first_number + second_number
-  end
-
-  def subtract(first_number, second_number)
-    first_number - second_number
-  end
-
-  def multiply(first_number, second_number)
-    first_number * second_number
-  end
-
-  def divide(first_number, second_number)
-    first_number / second_number
-  end
+class FancyCalculator < SimpleCalculator
 
   def square_root(number)
     Math.sqrt(number)
@@ -58,3 +42,106 @@ end
 
 # Write your own driver code below:
 
+puts "Calculator Testing"
+puts 
+
+simple_calculator = SimpleCalculator.new
+advanced_calculator = FancyCalculator.new
+
+result = simple_calculator.add(4,3)
+
+puts "Simple Calculator Return:"
+puts result
+
+
+  if result == 7
+    puts "PASS"
+  else
+   puts "FAIL"
+  end
+
+result = simple_calculator.subtract(4, 3)
+puts "Simple Calculator Returned:"
+puts result
+
+
+ if result == 1
+    puts "PASS"
+  else
+   puts "FAIL"
+  end
+
+result = simple_calculator.multiply(4, 3)
+puts "Simple Calculator Returnd:"
+puts result
+
+  if result == 12
+      puts "PASS"
+  else
+      puts "FAIL"
+  end
+
+result = simple_calculator.divide(8, 2)
+puts "Simple Calculator Returned:"
+puts result
+
+ if result == 4
+      puts "PASS"
+  else
+      puts "FAIL"
+  end
+
+
+  
+  
+result = advanced_calculator.add(4,3)
+puts "Advanced Calculator Returned:"
+puts result
+
+  if result == 7
+    puts "PASS"
+  else
+   puts "FAIL"
+  end
+
+result = advanced_calculator.subtract(4, 3)
+puts "Advanced Calculator Returned:"
+puts result
+
+
+ if result == 1
+    puts "PASS"
+  else
+   puts "FAIL"
+  end
+
+result = advanced_calculator.multiply(4, 3)
+puts "Advanced Calculator Returned:"
+puts result
+
+  if result == 12
+      puts "PASS"
+  else
+      puts "FAIL"
+  end
+
+result = advanced_calculator.divide(8, 2)
+puts "Advanced Calculator Returned:"
+puts result
+
+ if result == 4
+      puts "PASS"
+  else
+      puts "FAIL"
+  end
+
+result = advanced_calculator.square_root(16)
+puts "Advanced calculator Returned:"
+puts result
+
+
+  if result == 4
+    puts "PASS"
+  else
+    puts "FAIL"
+  end
